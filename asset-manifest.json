@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "https://healthcheck.fun/static/css/main.a4ff9d19.css",
+    "main.js": "https://healthcheck.fun/static/js/main.f308ee2b.js",
+    "static/js/453.06f4fb1b.chunk.js": "https://healthcheck.fun/static/js/453.06f4fb1b.chunk.js",
+    "index.html": "https://healthcheck.fun/index.html",
+    "main.a4ff9d19.css.map": "https://healthcheck.fun/static/css/main.a4ff9d19.css.map",
+    "main.f308ee2b.js.map": "https://healthcheck.fun/static/js/main.f308ee2b.js.map",
+    "453.06f4fb1b.chunk.js.map": "https://healthcheck.fun/static/js/453.06f4fb1b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a4ff9d19.css",
+    "static/js/main.f308ee2b.js"
+  ]
+}
