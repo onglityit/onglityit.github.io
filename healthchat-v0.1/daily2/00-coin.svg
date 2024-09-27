@@ -1,0 +1,32 @@
+
+<svg viewBox="7.276 13.678 202.6797 160" width="202.6797" height="160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="engrave" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+      <feOffset in="blur" dx="-1" dy="-1" result="offsetBlur"/>
+      <feSpecularLighting in="blur" surfaceScale="10" specularConstant=".75" specularExponent="20" lighting-color="#bbbbbb" result="specOut">
+        <fePointLight x="5000" y="10000" z="20000"/>
+      </feSpecularLighting>
+      <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
+      <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+    </filter>
+    <filter id="emboss" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1" result="blur"/>
+      <feOffset in="blur" dx="1" dy="1" result="offsetBlur"/>
+      <feSpecularLighting in="blur" surfaceScale="5" specularConstant=".75" specularExponent="20" lighting-color="#bbbbbb" result="specOut">
+        <fePointLight x="-5000" y="-10000" z="20000"/>
+      </feSpecularLighting>
+      <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
+      <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+    </filter>
+  </defs>
+  <ellipse cx="105.405" cy="93.678" rx="83.722" ry="80" fill="gold" stroke="darkgoldenrod" stroke-width="3" transform="matrix(1, 0, 0, 1, -2.842170943040401e-14, 0)"/>
+  <ellipse cx="105.405" cy="93.678" rx="79.071" ry="75" fill="none" stroke="darkgoldenrod" stroke-width="1" stroke-dasharray="5,5" transform="matrix(1, 0, 0, 1, -2.842170943040401e-14, 0)"/>
+  <polyline points="62.135 91.349 80.509 91.334 93.121 74.004 105.164 109.042 110.976 91.224 124.644 91.337 143.056 90.978" fill="none" stroke="red" stroke-linecap="round" stroke-linejoin="round" filter="url(#engrave)" style="paint-order: fill; stroke-width: 6px;" transform="matrix(1, 0, 0, 1, -2.842170943040401e-14, 0)"/>
+  <text x="7.276" y="67.679" font-family="Arial" font-size="57.9px" font-weight="bold" fill="rgb(105, 79, 12)" filter="url(#emboss)" style="white-space: pre; font-size: 57.9px;" transform="matrix(1, 0, 0, 1, -2.842170943040401e-14, 0)">
+    H
+  </text>
+  <text style="fill: rgb(105, 79, 12); font-family: Arial; font-size: 51.8px; font-weight: 700; stroke-width: 0px; white-space: pre; filter: url('#emboss');" x="22.671" y="154.811" transform="matrix(1, 0, 0, 1, -2.842170943040401e-14, 0)">
+    1
+  </text>
+</svg>
