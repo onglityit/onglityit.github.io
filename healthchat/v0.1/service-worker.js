@@ -1,9 +1,9 @@
 const CACHE_NAME = 'healthchat-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/static/js/main.js',
-  '/static/css/main.css',
+  'https://onglityit.github.io/healthchat/v0.1/',
+  'https://onglityit.github.io/healthchat/v0.1/index.html',
+  'https://onglityit.github.io/healthchat/v0.1/static/js/main.js',
+  'https://onglityit.github.io/healthchat/v0.1/static/css/main.css',
   // Add other URLs you want to cache
 ];
 
