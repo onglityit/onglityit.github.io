@@ -1,0 +1,34 @@
+
+<svg viewBox="301.051 79.377 165.436 160" width="165.436" height="160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="engrave" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+      <feOffset in="blur" dx="-1" dy="-1" result="offsetBlur"/>
+      <feSpecularLighting in="blur" surfaceScale="10" specularConstant=".75" specularExponent="20" lighting-color="#bbbbbb" result="specOut">
+        <fePointLight x="5000" y="10000" z="20000"/>
+      </feSpecularLighting>
+      <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
+      <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+    </filter>
+    <filter id="emboss" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1" result="blur"/>
+      <feOffset in="blur" dx="1" dy="1" result="offsetBlur"/>
+      <feSpecularLighting in="blur" surfaceScale="5" specularConstant=".75" specularExponent="20" lighting-color="#bbbbbb" result="specOut">
+        <fePointLight x="-5000" y="-10000" z="20000"/>
+      </feSpecularLighting>
+      <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
+      <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+    </filter>
+  </defs>
+  <ellipse cx="383.769" cy="159.377" rx="82.718" ry="80" fill="gold" stroke="darkgoldenrod" stroke-width="3" style="" transform="matrix(1, 0, 0, 1, 7.105427357601002e-15, 0)"/>
+  <ellipse cx="383.769" cy="159.243" rx="78.122" ry="75.96" fill="none" stroke="darkgoldenrod" stroke-width="1" style="stroke-dasharray: 2;" transform="matrix(1, 0, 0, 1, 7.105427357601002e-15, 0)"/>
+  <polygon points="330.017 133.699 334.957 138.699 339.897 133.699 334.957 128.699" fill="goldenrod" opacity="0.5" style="" transform="matrix(1, 0, 0, 1, 7.105427357601002e-15, 0)"/>
+  <polygon points="427.829 133.699 432.769 138.699 437.709 133.699 432.769 128.699" fill="darkgoldenrod" opacity="0.3" style="" transform="matrix(1, 0, 0, 1, 7.105427357601002e-15, 0)"/>
+  <polygon points="398.189 175.699 403.129 180.699 408.069 175.699 403.129 170.699" fill="gold" opacity="0.4" style="" transform="matrix(1, 0, 0, 1, 7.105427357601002e-15, 0)"/>
+  <polygon points="421.901 190.699 426.841 195.699 431.781 190.699 426.841 185.699" fill="peru" opacity="0.2" style="" transform="matrix(1, 0, 0, 1, 7.105427357601002e-15, 0)"/>
+  <polygon points="341.808 192.656 345.782 196.68 349.758 192.656 345.782 188.633" fill="saddlebrown" opacity="0.3" style="" transform="matrix(1, 0, 0, 1, 7.105427357601002e-15, 0)"/>
+  <polyline points="346.946 158.925 365.1 158.91 377.56 141.58 389.459 176.618 395.201 158.8 408.705 158.913 426.896 158.554" fill="none" stroke="red" stroke-linecap="round" stroke-linejoin="round" filter="url(#engrave)" style="paint-order: fill; stroke-width: 6px;" transform="matrix(1, 0, 0, 1, 7.105427357601002e-15, 0)"/>
+  <text style="fill: rgb(105, 79, 12); font-family: Arial; font-size: 51.8px; font-weight: 700; stroke-width: 0px; white-space: pre; filter: url('#emboss');" x="9.628" y="164.556" transform="matrix(0.9880040287971497, 0, 0, 1, 291.9591369628906, 56.01955032348633)">
+    1
+  </text>
+</svg>

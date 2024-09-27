@@ -1,0 +1,24 @@
+
+<svg viewBox="173.0643 117.2639 97.9394 85.9801" width="97.9394" height="85.9801" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient gradientUnits="userSpaceOnUse" cx="210.86" cy="150.319" r="21.703" id="gradient-0" gradientTransform="matrix(-2.206908, 3.509609, -2.214057, -1.392237, 1029.460109, -345.678475)">
+      <stop offset="0" style="stop-color:#003300; stop-opacity:1"/>
+      <stop offset="0.242" style="stop-color: rgb(31, 97, 30);"/>
+      <stop offset="0.885" style="stop-color:#66cc66; stop-opacity:1"/>
+      <stop offset="1" style="stop-opacity: 1; stop-color: rgb(162, 238, 162);"/>
+    </radialGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="3" dy="3" result="offsetblur"/>
+      <feFlood flood-color="rgba(0, 0, 0, 0.5)"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <path d="M 222.034 115.781 C 240.83 125.663 259.625 145.429 222.034 204.727 C 203.238 184.961 184.443 155.313 222.034 115.781 Z" style="fill: url('#gradient-0'); transform-origin: 222.034px 160.254px;" filter="url(#shadow)" transform="matrix(0.563501119614, 0.826116025448, -0.826116025448, 0.563501119614, 0.000013113173, 0.000001090306)"/>
+  <path d="M 219.961 119.705 C 224.66 134.53 238.757 154.295 219.961 208.651" stroke="#fff" stroke-width="1.5" fill="none" style="transform-origin: 224.711px 164.178px;" transform="matrix(0.563501119614, 0.826116025448, -0.826116025448, 0.563501119614, 0.000009624336, -0.000011554457)"/>
+  <path d="M 224.107 111.857 C 219.408 126.682 205.311 146.447 224.107 200.803" stroke="#fff" stroke-width="1.5" fill="none" style="transform-origin: 219.357px 156.33px;" transform="matrix(0.563501119614, 0.826116025448, -0.826116025448, 0.563501119614, 0.000017317368, -0.000002877649)"/>
+</svg>

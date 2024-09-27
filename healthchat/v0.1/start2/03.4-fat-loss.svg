@@ -1,0 +1,15 @@
+<svg width="150" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text
+    x="50%"
+    y="30"
+    text-anchor="middle"
+    font-family="'Lato'"
+    font-size="20"
+    fill="#0B444F"
+  >
+    <tspan x="50%" dy="0">I am Your</tspan>
+    <tspan x="50%" dy="1.2em">fat Loss</tspan>
+    <tspan x="50%" dy="1.2em">And Exercise</tspan>
+    <tspan x="50%" dy="1.2em">Assistant Chatbot</tspan>
+  </text>
+</svg>
