@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="343.7741 230.6794 104.4865 102.8995" width="104.4865" height="102.8995" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <linearGradient id="goldMetallic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0" style="stop-color:#FFD700;stop-opacity:1"/>
+      <stop offset="0.5" style="stop-color:#FFA500;stop-opacity:1"/>
+      <stop offset="1" style="stop-color:#FFD700;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="352.817" cy="293.569" rx="43.348" ry="42.261" fill="url(#goldMetallic)" stroke="#B8860B" stroke-width="2" style="" transform="matrix(0.970620036125183, -0.24061900377273557, 0.24061900377273557, 0.970620036125183, -17.07221794128418, 82.07968139648439)"/>
+  <ellipse cx="352.817" cy="293.569" rx="37.93" ry="35.217" fill="white" stroke="#B8860B" stroke-width="1" style="" transform="matrix(0.970620036125183, -0.24061900377273557, 0.24061900377273557, 0.970620036125183, -17.07221794128418, 82.07968139648439)"/>
+  <g stroke="brown" stroke-width="2" transform="matrix(0.830812096595764, -0.20596200227737424, 0.18054199218749997, 0.7282769083976744, 294.4925842285156, 230.26287841796875)" style="">
+    <line x1="100" y1="55" x2="100" y2="65"/>
+    <line x1="135" y1="82" x2="130" y2="90"/>
+    <line x1="135" y1="118" x2="130" y2="110"/>
+    <line x1="100" y1="145" x2="100" y2="135"/>
+    <line x1="65" y1="118" x2="70" y2="110"/>
+    <line x1="65" y1="82" x2="70" y2="90"/>
+  </g>
+  <g transform="matrix(0.634259998798, 0.553776979446, -0.346934050322, 0.776178896427, 295.72063116873, 183.487692845832)" style="transform-origin: 100px 98.4492px;">
+    <path d="M100 60 L95 100 L100 140 L105 100 Z" fill="red" style=""/>
+    <path d="M100 140 L95 100 L100 60 L105 100 Z" fill="black" style=""/>
+    <path d="M 246.962 103.147 L 251.699 141.658 L 242.225 141.658 L 246.962 103.147 Z" style="fill: rgb(216, 19, 9); transform-box: fill-box; transform-origin: 50% 50%;" transform="matrix(0.968718, -0.248163, -0.004012, 1.03332, -146.974304, -44.443417)" bx:shape="triangle 242.225 103.147 9.474 38.511 0.5 0 1@a8222e05"/>
+  </g>
+  <circle cx="389.469" cy="275.83" r="3" fill="#B8860B" style="" transform="matrix(0.5259339213371277, -0.1303810030221939, 0.1694800108671188, 0.6836560368537902, 144.43463134765625, 144.3351287841797)"/>
+</svg>
