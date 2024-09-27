@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "https://onglityit.github.io/healthchat/v0.1/static/css/main.bde80f61.css",
-    "main.js": "https://onglityit.github.io/healthchat/v0.1/static/js/main.80edc2fa.js",
-    "static/js/453.06f4fb1b.chunk.js": "https://onglityit.github.io/healthchat/v0.1/static/js/453.06f4fb1b.chunk.js",
-    "index.html": "https://onglityit.github.io/healthchat/v0.1/index.html",
-    "main.bde80f61.css.map": "https://onglityit.github.io/healthchat/v0.1/static/css/main.bde80f61.css.map",
-    "main.80edc2fa.js.map": "https://onglityit.github.io/healthchat/v0.1/static/js/main.80edc2fa.js.map",
-    "453.06f4fb1b.chunk.js.map": "https://onglityit.github.io/healthchat/v0.1/static/js/453.06f4fb1b.chunk.js.map"
+    "main.css": "https://onglityit.github.io/healthchat-v0.1/static/css/main.bde80f61.css",
+    "main.js": "https://onglityit.github.io/healthchat-v0.1/static/js/main.e8d543d1.js",
+    "static/js/453.06f4fb1b.chunk.js": "https://onglityit.github.io/healthchat-v0.1/static/js/453.06f4fb1b.chunk.js",
+    "index.html": "https://onglityit.github.io/healthchat-v0.1/index.html",
+    "main.bde80f61.css.map": "https://onglityit.github.io/healthchat-v0.1/static/css/main.bde80f61.css.map",
+    "main.e8d543d1.js.map": "https://onglityit.github.io/healthchat-v0.1/static/js/main.e8d543d1.js.map",
+    "453.06f4fb1b.chunk.js.map": "https://onglityit.github.io/healthchat-v0.1/static/js/453.06f4fb1b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bde80f61.css",
-    "static/js/main.80edc2fa.js"
+    "static/js/main.e8d543d1.js"
   ]
 }
