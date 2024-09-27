@@ -1,0 +1,48 @@
+const CACHE_NAME = 'healthchat-v1';
+const urlsToCache = [
+  '/healthchat/v0.1/',
+  '/healthchat/v0.1/index.html',
+  '/healthchat/v0.1/static/js/main.js',
+  '/healthchat/v0.1/static/css/main.css',
+  // Add other URLs you want to cache
+];
+
+self.addEventListener('install', function(event) {
+  // Perform install steps
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(function(cache) {
+        console.log('Opened cache');
+        return cache.addAll(urlsToCache);
+      })
+  );
+});
+
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request)
+      .then(function(response) {
+        // Cache hit - return response
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
+  );
+});
+
+self.addEventListener('activate', function(event) {
+  var cacheWhitelist = ['healthchat-v1'];
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          if (cacheWhitelist.indexOf(cacheName) === -1) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
