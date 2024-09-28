@@ -1,3 +1,5 @@
+import { showSociety } from './01-society.js';
+
 $(document).ready(function() {
     const introContainer = $('#intro-container');
     introContainer.html('<h1 id="intro-text"></h1>');
@@ -18,7 +20,9 @@ $(document).ready(function() {
         'position': 'absolute',
         'top': '50%',
         'left': '50%',
-        'transform': 'translate(-50%, -50%)'
+        'transform': 'translate(-50%, -50%)',
+        'white-space': 'nowrap',
+        'text-align': 'center'
     });
 
     // Typewriter effect
@@ -33,6 +37,8 @@ $(document).ready(function() {
             clearInterval(typeWriter);
             // Start glow animation after typing
             animateGlow();
+            // Schedule transition to society.js
+            setTimeout(transitionToSociety, 3000);
         }
     }, 100);
 
@@ -48,6 +54,20 @@ $(document).ready(function() {
             duration: 2000,
             easing: 'easeInOutQuad',
             loop: true
+        });
+    }
+
+    // Transition to society.js
+    function transitionToSociety() {
+        anime({
+            targets: '#intro-text',
+            opacity: 0,
+            duration: 1000,
+            easing: 'easeOutQuad',
+            complete: () => {
+                introContainer.empty();
+                showSociety();
+            }
         });
     }
 });
