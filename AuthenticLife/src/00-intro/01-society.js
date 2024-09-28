@@ -1,9 +1,13 @@
+import { createBoxes } from './01.1-boxes.js';
+
 export function showSociety() {
     const introContainer = $('#intro-container');
-    introContainer.html('<p id="society-text"></p>');
+    introContainer.html('<div id="box-container"></div><p id="society-text"></p>');
+
+    createBoxes();
 
     const societyText = $('#society-text');
-    const text = "I see society is fake...\nBut that is just my own reflection, of moral policing";
+    const text = "Society is fake...\nBut that is just my own reflection, of moral policing";
 
     societyText.css({
         'font-family': 'Consolas, monospace',
@@ -14,7 +18,8 @@ export function showSociety() {
         'top': '50%',
         'left': '50%',
         'transform': 'translate(-50%, -50%)',
-        'white-space': 'pre-line'
+        'white-space': 'pre-line',
+        'z-index': '10'
     });
 
     let i = 0;
