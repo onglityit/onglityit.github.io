@@ -3,7 +3,7 @@ $(document).ready(function() {
     introContainer.html('<h1 id="intro-text"></h1>');
 
     const introText = $('#intro-text');
-    introText.text('My Dark Side');
+    introText.text('My Inner Self, in Absence of Light');
 
     // Set styles
     $('body').css('background-color', 'black');
