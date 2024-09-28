@@ -1,4 +1,5 @@
 import { showSociety } from './01-society.js';
+import { initNavigation } from '../navigation.js';
 
 export function initIntro() {
     const introContainer = $('#intro-container');
@@ -90,6 +91,7 @@ export function initIntro() {
             complete: () => {
                 introContainer.empty();
                 showSociety();
+                initNavigation(1, totalAnimations);
             }
         });
     }
