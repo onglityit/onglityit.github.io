@@ -1,11 +1,12 @@
 import { showSociety } from './01-society.js';
 
-$(document).ready(function() {
+export function initIntro() {
     const introContainer = $('#intro-container');
     introContainer.html('<h1 id="intro-text"></h1>');
 
     const introText = $('#intro-text');
     introText.text('My Inner Self, in Absence of Light');
+
 
     // Set styles
     $('body').css('background-color', 'black');
@@ -25,7 +26,6 @@ $(document).ready(function() {
         'text-align': 'center'
     });
 
-    // Typewriter effect
     const text = introText.text();
     introText.text('');
     let i = 0;
