@@ -39,7 +39,10 @@ export function animateNewMultiverse() {
                     easing: 'easeOutQuad',
                     complete: function() {
                         container.empty();
-                        // Here you can reinitialize your main content
+                        // Wait 0.5 seconds, then perform hard refresh
+                        setTimeout(() => {
+                            location.reload(true);
+                        }, 500);
                     }
                 });
             }, 2000);  // Wait 2 seconds before fading out
