@@ -7,7 +7,7 @@ export function showSociety() {
     createBoxes();
 
     const societyText = $('#society-text');
-    const text = "Society is fake...\nBut that is just my own reflection, of moral policing";
+    const text = "Society is fake...\nBut that is just my own reflection, of moral policing.. I am the fake one.";
 
     societyText.css({
         'font-family': 'Consolas, monospace',
