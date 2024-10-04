@@ -64,7 +64,7 @@ function powderizeBoxes(boxes) {
     setTimeout(() => {
         document.getElementById('box-container').remove();
         startHallucination();
-    }, 2000);
+    }, 12000);
 }
 
 function createParticles(box) {
