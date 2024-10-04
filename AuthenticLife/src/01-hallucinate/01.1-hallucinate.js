@@ -23,5 +23,4 @@ function createHallucinationEffect(container) {
         }
     }, 100); // Adjust typing speed if needed
 }
-
    

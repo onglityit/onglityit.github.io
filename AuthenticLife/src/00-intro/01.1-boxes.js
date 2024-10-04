@@ -56,11 +56,19 @@ function animateBox(box) {
 function powderizeBoxes(boxes) {
     boxes.forEach(box => {
         const particles = createParticles(box);
-        box.remove();
-        animateParticles(particles);
+        anime({
+            targets: box,
+            opacity: 0,
+            duration: 1000, // Duration of the fade-out effect
+            easing: 'easeOutQuad',
+            complete: function() {
+                box.remove(); // Remove the box after fading out
+                animateParticles(particles); // Animate particles after box removal
+            }
+        });
     });
 
-    // Transition to hallucination effect after powderization
+    // Transition to hallucination effect after all boxes are powderized
     setTimeout(() => {
         document.getElementById('box-container').remove();
         startHallucination();
