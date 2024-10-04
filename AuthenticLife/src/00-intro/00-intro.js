@@ -1,3 +1,4 @@
+// AuthenticLife/src/00-intro/00-intro.js
 import { showSociety } from './01-society.js';
 import { initNavigation } from '../navigation.js';
 

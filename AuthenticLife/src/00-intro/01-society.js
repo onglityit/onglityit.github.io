@@ -1,3 +1,4 @@
+// AuthenticLife/src/00-intro/01-society.js
 import { createBoxes } from './01.1-boxes.js';
 
 export function showSociety() {
