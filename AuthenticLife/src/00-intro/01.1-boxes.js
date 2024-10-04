@@ -32,6 +32,8 @@ export function createBoxes() {
     setTimeout(() => powderizeBoxes(boxes), 10000);
 }
 
+
+
 function animateBox(box) {
     const duration = Math.random() * 10000 + 5000;
     const delay = Math.random() * 5000;
@@ -52,17 +54,25 @@ function animateBox(box) {
         }
     });
 }
-
+ 
 function powderizeBoxes(boxes) {
+    const societyText = document.getElementById('society-text'); // Get the society text element
+
     boxes.forEach(box => {
+        // Create particles from the box
         const particles = createParticles(box);
+
+        // Fade out the box and society text before removing
         anime({
-            targets: box,
+            targets: [box, societyText], // Animate both box and society text
             opacity: 0,
             duration: 1000, // Duration of the fade-out effect
             easing: 'easeOutQuad',
             complete: function() {
                 box.remove(); // Remove the box after fading out
+                if (boxes.every(b => b.style.opacity === '0')) {
+                    societyText.remove(); // Remove society text after all boxes are gone
+                }
                 animateParticles(particles); // Animate particles after box removal
             }
         });
