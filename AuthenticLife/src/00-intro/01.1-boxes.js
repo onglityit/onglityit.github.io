@@ -29,7 +29,7 @@ export function createBoxes() {
     }
 
     // Schedule powderization after 10 seconds
-    setTimeout(() => powderizeBoxes(boxes), 10000);
+    setTimeout(() => powderizeBoxes(boxes), 3000);
 }
 
 
@@ -82,7 +82,7 @@ function powderizeBoxes(boxes) {
     setTimeout(() => {
         document.getElementById('box-container').remove();
         startHallucination();
-    }, 12000);
+    }, 6000);
 }
 
 function createParticles(box) {

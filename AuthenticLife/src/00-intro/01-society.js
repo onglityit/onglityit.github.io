@@ -32,5 +32,5 @@ export function showSociety() {
             clearInterval(typeWriter);
             initNavigation(2, totalAnimations);
         }
-    }, 50);
+    }, 25);
 }
