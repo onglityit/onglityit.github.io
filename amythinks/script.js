@@ -105,6 +105,23 @@ function hideInputContainer() {
     toggleInputContainer(false); // Hide input container  
 }
 
+function typeWriter(element, text, delay) {
+    let index = 0;
+    element.innerText = ''; // Clear the element before starting  
+    const typingInterval = setInterval(() => {
+        if (index < text.length) {
+            element.innerText += text.charAt(index);
+            index++;
+        } else {
+            clearInterval(typingInterval);
+        }
+    }, delay);
+}
+
+const questionText = 'Hi, I am Amy. What do you want to "Become/Get Rid Of"?';
+const questionElement = document.querySelector('.question');
+typeWriter(questionElement, questionText, 100);
+
 fasterButtons.forEach(button => {
     button.addEventListener('click', function() {
         speedMultiplier += 2; // Increase speed  
