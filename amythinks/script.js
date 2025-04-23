@@ -22,14 +22,14 @@ let duration = 15000; // 15 seconds in milliseconds
 let speedMultiplier = 1; // Default speed
 
 becomeButton.addEventListener('click', function() {
-    inputContainer.style.display = 'block';
+    toggleInputContainer(true); // Show input container for "Become"
     inputBecome.style.display = 'block';
     inputGetRidOf.style.display = 'none';
     inputBecome.focus();
 });
 
 getRidOfButton.addEventListener('click', function() {
-    inputContainer.style.display = 'block';
+    toggleInputContainer(true); // Show input container for "Get Rid Of"
     inputGetRidOf.style.display = 'block';
     inputBecome.style.display = 'none';
     inputGetRidOf.focus();
@@ -93,6 +93,16 @@ function startHistogram() {
 
 function showTrophy() {
     overlay.style.display = 'flex';
+}
+function toggleInputContainer(show) {
+    if (show) {
+        inputContainer.style.display = 'flex'; // Show the input container  
+    } else {
+        inputContainer.style.display = 'none'; // Hide the input container  
+    }
+}
+function hideInputContainer() {
+    toggleInputContainer(false); // Hide input container  
 }
 
 fasterButtons.forEach(button => {
