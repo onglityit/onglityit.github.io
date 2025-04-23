@@ -11,14 +11,24 @@
     <div class="question">Hi, I am Amy. What do you want to "Become/Get Rid Of"?</div>
     
     <div class="button-container">
-        <button class="btn btnBecome">Become</button> <!-- Changed button class to btnBecome -->
+        <button class="btn btnBecome">Become</button>
         <button class="btn btnGetRidOf">Get Rid Of</button>
     </div>
 
     <div class="input-container">
         <input type="text" class="input inputBecome" placeholder="What do you want to become?">
         <input type="text" class="input inputGetRidOf" placeholder="What do you want to get rid of?">
-        <button class="btn btnSubmit" style="margin-top: 10px;">Submit</button> <!-- Added Submit button -->
+        <button class="btn btnSubmit" style="margin-top: 10px;">Submit</button>
+    </div>
+
+    <div class="progress-container" style="display: none;">
+        <div class="progress-bar" id="progressBar"></div>
+        <div class="progress-text" id="progressText">0.0%</div>
+        <button class="btn btnFaster" style="margin-top: 10px;">Faster</button>
+    </div>
+
+    <div class="overlay" id="overlay" style="display: none;">
+        <img src="gold_trophy.svg" alt="Champion Trophy" class="trophy">
     </div>
 
     <script src="script.js"></script> <!-- Link to the external JavaScript file -->
