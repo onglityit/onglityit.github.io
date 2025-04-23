@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -76,6 +75,27 @@
             transform: translateY(2px);
         }
 
+        .input-container {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .input {
+            padding: 10px;
+            border-radius: 20px;
+            border: 2px solid transparent;
+            font-size: 18px;
+            width: 300px;
+        }
+
+        .inputImprove {
+            border-color: #FFD700; /* Gold border */
+        }
+
+        .inputGetRidOf {
+            border-color: #C0C0C0; /* Silver border */
+        }
+
         @media (max-width: 600px) {
             .question {
                 font-size: 20px;
@@ -84,6 +104,10 @@
             .btn {
                 font-size: 16px;
                 padding: 8px 16px;
+            }
+
+            .input {
+                width: 80%; /* Responsive width for mobile */
             }
         }
     </style>
@@ -98,14 +122,30 @@
         <button class="btn btnGetRidOf">Get Rid Of</button>
     </div>
 
+    <div class="input-container">
+        <input type="text" class="input inputImprove" placeholder="What do you want to improve?">
+        <input type="text" class="input inputGetRidOf" placeholder="What do you want to get rid of?">
+    </div>
+
     <script>
-        // Optional: Add functionality to buttons  
-        document.querySelector('.btnImprove').addEventListener('click', function() {
-            alert('You chose to Improve!');
+        const improveButton = document.querySelector('.btnImprove');
+        const getRidOfButton = document.querySelector('.btnGetRidOf');
+        const inputContainer = document.querySelector('.input-container');
+        const inputImprove = document.querySelector('.inputImprove');
+        const inputGetRidOf = document.querySelector('.inputGetRidOf');
+
+        improveButton.addEventListener('click', function() {
+            inputContainer.style.display = 'block';
+            inputImprove.style.display = 'block';
+            inputGetRidOf.style.display = 'none';
+            inputImprove.focus();
         });
 
-        document.querySelector('.btnGetRidOf').addEventListener('click', function() {
-            alert('You chose to Get Rid Of!');
+        getRidOfButton.addEventListener('click', function() {
+            inputContainer.style.display = 'block';
+            inputGetRidOf.style.display = 'block';
+            inputImprove.style.display = 'none';
+            inputGetRidOf.focus();
         });
     </script>
 </body>
