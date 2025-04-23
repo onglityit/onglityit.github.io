@@ -119,6 +119,10 @@ overlay.addEventListener('click', function() {
     progressText.innerText = '0.0%';
     histogram.style.height = '100%';
     histogramText.innerText = '100.0%';
+    
+    // Hide the input container and submit button  
+    toggleInputContainer(false); // Hide the input container
+
     clearInterval(progressInterval);
     clearInterval(histogramInterval);
     speedMultiplier = 1; // Reset speed  
