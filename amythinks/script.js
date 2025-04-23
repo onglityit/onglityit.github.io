@@ -7,12 +7,17 @@ const submitButton = document.querySelector('.btnSubmit');
 const progressContainer = document.querySelector('.progress-container');
 const progressBar = document.getElementById('progressBar');
 const progressText = document.getElementById('progressText');
+const histogramContainer = document.querySelector('.histogram-container');
+const histogram = document.getElementById('histogram');
+const histogramText = document.getElementById('histogramText');
 const overlay = document.getElementById('overlay');
 const trophy = document.querySelector('.trophy');
-const fasterButton = document.querySelector('.btnFaster');
+const fasterButtons = document.querySelectorAll('.btnFaster');
 
 let progressInterval;
+let histogramInterval;
 let progress = 0;
+let histogramValue = 100;
 let duration = 15000; // 15 seconds in milliseconds  
 let speedMultiplier = 1; // Default speed
 
@@ -43,12 +48,14 @@ submitButton.addEventListener('click', function() {
             alert("What you want to Get Rid Of cannot be empty");
         } else {
             alert(`You want to get rid of: ${inputGetRidOf.value}`);
+            startHistogram();
         }
     }
 });
 
 function startProgress() {
     progressContainer.style.display = 'block';
+    histogramContainer.style.display = 'none';
     progress = 0;
     progressBar.style.width = '0%';
     progressText.innerText = '0.0%';
@@ -65,19 +72,44 @@ function startProgress() {
     }, 1000);
 }
 
+function startHistogram() {
+    histogramContainer.style.display = 'block';
+    progressContainer.style.display = 'none';
+    histogramValue = 100;
+    histogram.style.height = '100%';
+    histogramText.innerText = '100.0%';
+
+    histogramInterval = setInterval(() => {
+        histogramValue -= (100 / (duration / 1000)) * speedMultiplier;
+        if (histogramValue <= 0) {
+            histogramValue = 0;
+            clearInterval(histogramInterval);
+            showTrophy();
+        }
+        histogram.style.height = `${histogramValue}%`;
+        histogramText.innerText = `${Math.abs(histogramValue).toFixed(1)}%`;
+    }, 1000);
+}
+
 function showTrophy() {
     overlay.style.display = 'flex';
 }
 
-fasterButton.addEventListener('click', function() {
-    speedMultiplier += 2; // Increase speed  
+fasterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        speedMultiplier += 2; // Increase speed  
+    });
 });
 
 overlay.addEventListener('click', function() {
     overlay.style.display = 'none';
     progressContainer.style.display = 'none';
+    histogramContainer.style.display = 'none';
     progressBar.style.width = '0%';
     progressText.innerText = '0.0%';
+    histogram.style.height = '100%';
+    histogramText.innerText = '100.0%';
     clearInterval(progressInterval);
+    clearInterval(histogramInterval);
     speedMultiplier = 1; // Reset speed  
 });
