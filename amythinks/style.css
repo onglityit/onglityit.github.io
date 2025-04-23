@@ -111,6 +111,10 @@ img {
     margin-right: 10px; /* Space between the bar and the button */
 }
 
+.faster-button-container {
+    display: flex; /* Use flexbox for the button container */
+    justify-content: flex-end; /* Align button to the right */
+}
 .progress-text {
     margin-top: 10px;
     font-size: 20px;
