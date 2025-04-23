@@ -119,7 +119,7 @@ function typeWriter(element, text, delay) {
     }, delay);
 }
 
-const questionText = 'Hi, I am Amy. What do you want to Become / Get Rid Of ?';
+const questionText = 'Hi, I am Amy. <BR>What do you want to Become / Get Rid Of ?';
 const questionElement = document.querySelector('.question');
 typeWriter(questionElement, questionText, 100);
 
