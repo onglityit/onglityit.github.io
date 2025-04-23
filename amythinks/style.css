@@ -70,7 +70,9 @@ img {
 }
 
 .input-container {
-    display: none;
+    display: none; /* Initial state */
+    flex-direction: column;
+    align-items: center;
     margin-top: 20px;
 }
 
