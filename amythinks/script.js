@@ -119,11 +119,27 @@ overlay.addEventListener('click', function() {
     progressText.innerText = '0.0%';
     histogram.style.height = '100%';
     histogramText.innerText = '100.0%';
-    
+
     // Hide the input container and submit button  
     toggleInputContainer(false); // Hide the input container
+
+    // Clear the input fields  
+    inputBecome.value = '';
+    inputGetRidOf.value = '';
 
     clearInterval(progressInterval);
     clearInterval(histogramInterval);
     speedMultiplier = 1; // Reset speed  
+});
+
+inputBecome.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        submitButton.click(); // Trigger the submit button click  
+    }
+});
+
+inputGetRidOf.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        submitButton.click(); // Trigger the submit button click  
+    }
 });
