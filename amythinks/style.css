@@ -18,10 +18,12 @@ img {
 .question {
     font-size: 24px;
     margin: 20px;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 4px solid;
+    overflow: hidden; /* Hide overflow text */
+    border-right: 4px solid; /* Cursor effect */
     animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+    max-width: 80vw; /* Set maximum width to 80% of the viewport width */
+    word-wrap: break-word; /* Allow text to wrap */
+    white-space: normal; /* Allow normal wrapping */
 }
 
 @keyframes typing {
