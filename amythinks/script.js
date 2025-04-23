@@ -107,10 +107,11 @@ function hideInputContainer() {
 
 function typeWriter(element, text, delay) {
     let index = 0;
-    element.innerText = ''; // Clear the element before starting  
+    element.innerHTML = ''; // Clear the element before starting  
     const typingInterval = setInterval(() => {
         if (index < text.length) {
-            element.innerText += text.charAt(index);
+            const char = text.charAt(index) === ' ' ? '&nbsp;' : text.charAt(index); // Replace space with &nbsp;
+            element.innerHTML += char; // Use innerHTML to allow HTML entities  
             index++;
         } else {
             clearInterval(typingInterval);
