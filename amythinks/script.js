@@ -105,23 +105,36 @@ function hideInputContainer() {
     toggleInputContainer(false); // Hide input container  
 }
 
-function typeWriter(element, text, delay) {
+const firstLineElement = document.getElementById('firstLine');
+const secondLineElement = document.getElementById('secondLine');
+
+const firstLineText = 'Hi, I am Amy.'; // First line text  
+const secondLineText = 'What do you want to Become / Get Rid Of ?'; // Second line text
+
+// Function to type the first line  
+typeWriter(firstLineElement, firstLineText, 100, () => {
+    // After the first line is done, wait 2 seconds and type the second line  
+    setTimeout(() => {
+        secondLineElement.style.display = 'inline'; // Show the second line  
+        typeWriter(secondLineElement, secondLineText, 100); // Type the second line  
+    }, 2000); // 2 seconds delay  
+});
+
+// Typewriter effect function  
+function typeWriter(element, text, delay, callback) {
     let index = 0;
     element.innerHTML = ''; // Clear the element before starting  
     const typingInterval = setInterval(() => {
-        if (index < text.length) {
-            const char = text.charAt(index) === ' ' ? '&nbsp;' : text.charAt(index); // Replace space with &nbsp;
-            element.innerHTML += char; // Use innerHTML to allow HTML entities  
-            index++;
-        } else {
+        const char = text.charAt(index) === ' ' ? '&nbsp;' : text.charAt(index); // Replace space with &nbsp;
+        element.innerHTML += char; // Use innerHTML to allow HTML entities  
+        index++;
+        if (index >= text.length) {
             clearInterval(typingInterval);
+            if (callback) callback(); // Call the callback function if provided  
         }
     }, delay);
 }
 
-const questionText = 'Hi, I am Amy. <BR>What do you want to Become / Get Rid Of ?';
-const questionElement = document.querySelector('.question');
-typeWriter(questionElement, questionText, 100);
 
 fasterButtons.forEach(button => {
     button.addEventListener('click', function() {
